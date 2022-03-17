@@ -167,7 +167,7 @@ class LatLon(object):
         easting = int(ucoords.easting % 100e3)
         northing = int(ucoords.northing % 100e3)
 
-        gzd = "{:0>2}{}".format(ucoords.zone, band)
+        gzd = f"{ucoords.zone:0>2}{band}"
         square_id = square_e + square_n
 
         return mgrs.MGRS(gzd, square_id, easting, northing, precision)

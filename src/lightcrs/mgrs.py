@@ -40,7 +40,7 @@ class MGRS(object):
                 precision : int = 5) -> None:
 
         if len(gzd) < 3:
-            self.gzd = "{:0>3}".format(gzd)
+            self.gzd = f"{gzd:0>3}"
         else:
             self.gzd = gzd
 

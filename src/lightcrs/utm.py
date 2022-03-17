@@ -131,7 +131,7 @@ class UTM(object):
         easting = int(self.easting % 100e3)
         northing = int(self.northing % 100e3)
 
-        gzd = "{:0>2}{}".format(self.zone, band)
+        gzd = f"{self.zone:0>2}{band}"
         square_id = square_e + square_n
 
         return mgrs.MGRS(gzd, square_id, easting, northing, precision)
